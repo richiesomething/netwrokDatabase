@@ -1,0 +1,42 @@
+==7557== Memcheck, a memory error detector
+==7557== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==7557== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==7557== Command: ./a.out
+==7557== Parent PID: 6391
+==7557== 
+==7557== Conditional jump or move depends on uninitialised value(s)
+==7557==    at 0x4C2F201: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7557==    by 0x408276: Connection::~Connection() (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557==    by 0x4039AE: Network::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557==    by 0x40471F: Network::showMenu() (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557==    by 0x402815: main (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557== 
+==7557== Conditional jump or move depends on uninitialised value(s)
+==7557==    at 0x408282: Connection::~Connection() (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557==    by 0x4039AE: Network::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557==    by 0x40471F: Network::showMenu() (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557==    by 0x402815: main (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557== 
+==7557== Conditional jump or move depends on uninitialised value(s)
+==7557==    at 0x40829F: Connection::~Connection() (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557==    by 0x4039AE: Network::remove(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557==    by 0x40471F: Network::showMenu() (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557==    by 0x402815: main (in /home/student/Desktop/ee355-pa2-hern784/a.out)
+==7557== 
+==7557== 
+==7557== HEAP SUMMARY:
+==7557==     in use at exit: 72,704 bytes in 1 blocks
+==7557==   total heap usage: 1,347 allocs, 1,346 frees, 177,931 bytes allocated
+==7557== 
+==7557== LEAK SUMMARY:
+==7557==    definitely lost: 0 bytes in 0 blocks
+==7557==    indirectly lost: 0 bytes in 0 blocks
+==7557==      possibly lost: 0 bytes in 0 blocks
+==7557==    still reachable: 72,704 bytes in 1 blocks
+==7557==         suppressed: 0 bytes in 0 blocks
+==7557== Reachable blocks (those to which a pointer was found) are not shown.
+==7557== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==7557== 
+==7557== For counts of detected and suppressed errors, rerun with: -v
+==7557== Use --track-origins=yes to see where uninitialised values come from
+==7557== ERROR SUMMARY: 6 errors from 3 contexts (suppressed: 0 from 0)
